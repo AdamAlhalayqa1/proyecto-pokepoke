@@ -1,0 +1,125 @@
+/* Fondo temático con animación */
+body {
+  background-image: url('./src/assets/falling-pokeballs-3qsnk7e12tvlwsau.jpg'); 
+  background-size: 150px 150px; 
+  background-repeat: repeat; 
+  animation: moverFondo 10s linear infinite; 
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column; /* Acomoda el contenido en columna */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes moverFondo {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+.app {
+  text-align: center;
+  width: 100%;
+  max-width: 1280px;
+  padding: 2rem;
+}
+
+/* Tarjeta estilizada */
+.card-pokemon {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+  border: 2px solid #2a75bb; /* Borde azul */
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 20px;
+  width: 350px; /* Ancho fijo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center; /* Centrar texto */
+  margin: 20px auto; /* Centrar tarjeta */
+}
+
+.carta-img {
+  width: 200px; /* Tamaño de imagen ajustado */
+  height: auto;
+  margin: 10px 0; /* Espaciado alrededor */
+}
+
+.card-pokemon h2 {
+  font-size: 24px; /* Tamaño más grande para el nombre */
+  color: #2a75bb; /* Azul Pokémon */
+  margin-bottom: 10px;
+}
+
+.card-pokemon p {
+  font-size: 16px;
+  color: #333; /* Texto más oscuro */
+  margin: 5px 0; /* Espaciado entre líneas */
+}
+
+
+button {
+  background-color: #ffcb05; 
+  color: #2a75bb; 
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6b800;
+  transform: scale(1.1);
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 10px 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* Enlace estilizado */
+.pokemon-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffcb05; /* Amarillo Pokémon */
+  color: #2a75bb; /* Azul Pokémon */
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.pokemon-link:hover {
+  background-color: #e6b800; /* Amarillo más oscuro */
+  transform: scale(1.1); /* Aumentar tamaño al pasar el mouse */
+}
+/* Contenedor principal para el contenido central */
+.main-content {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px; /* Limitar el ancho */
+  text-align: center; /* Centrar el contenido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra */
+}
+.carta-container {
+  margin-bottom: 20px; /* Espaciado con la tarjeta del Pokémon */
+}
+
+
+
+
