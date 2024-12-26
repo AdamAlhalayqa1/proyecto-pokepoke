@@ -1,17 +1,45 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poke Poke</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/styles.css" />
+  
 
+</head>
+<body>
+  
+  <!-- Contenedor principal -->
+  <div id="root">
+    <!-- Título principal -->
+    <h1 class="main-title">Los Pokemones</h1>
 
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Poke Poke</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <!-- Botón de inicio de sesión -->
+    <button class="login-button">Iniciar Sesión</button>
+
+    <!-- Subtítulo -->
+    <h2 class="subtitle">Pokédex</h2>
+
+    <!-- Formulario de búsqueda -->
+    <form>
+      <label for="pokemon-search">Busca un Pokémon:</label>
+      <input
+        id="pokemon-search"
+        type="text"
+        class="search-input"
+        placeholder="Ingresa el nombre del Pokémon"
+      />
+      <button type="submit" class="search-button">Buscar</button>
+      <!-- Mensaje de error -->
+      <p class="error-message hidden">Por favor, ingresa un nombre válido.</p>
+    </form>
+  </div>
+
+  
+
+  <!-- Script principal -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>
-

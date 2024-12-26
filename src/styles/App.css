@@ -1,0 +1,219 @@
+/* === Variables === */
+:root {
+  --background-url: url('./src/assets/falling-pokeballs-3qsnk7e12tvlwsau.jpg');
+  --primary-font: 'Press Start 2P', cursive; /* Fuente personalizada para títulos */
+  --body-font: 'Arial', sans-serif; /* Fuente secundaria */
+  --primary-color: #ffcc00; /* Amarillo Pikachu */
+  --secondary-color: #ff9900; /* Naranja Pokémon */
+  --text-color: #333; /* Texto oscuro */
+  --white: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --highlight-color: #ff4500; /* Naranja fuerte */
+  --error-color: #ff4d4d; /* Rojo para resaltar errores */
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+/* === Body === */
+body {
+  background: var(--background-url) repeat center center !important;
+  background-size: cover !important;
+  font-family: var(--body-font) !important;
+  color: var(--text-color) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  animation: moverFondo 10s linear infinite !important;
+}
+
+/* Animación de movimiento del fondo */
+@keyframes moverFondo {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+/* Efecto de desenfoque para el fondo */
+body::before {
+  content: "" !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: inherit !important;
+  filter: blur(6px) brightness(0.8) !important;
+  z-index: -1 !important;
+  animation: parallaxFondo 15s ease-in-out infinite alternate !important;
+}
+
+/* Animación de parallax */
+@keyframes parallaxFondo {
+  0% { transform: scale(1) translateX(0); }
+  50% { transform: scale(1.1) translateX(-20px); }
+  100% { transform: scale(1) translateX(0); }
+}
+
+/* === Contenedor de Tarjetas === */
+.card-container {
+  display: flex ;
+  flex-direction: column ;
+  align-items: center ;
+  gap: 20px ;
+}
+
+/* === Tarjeta Pokémon === */
+.card-pokemon {
+  background-color: rgba(255, 255, 255, 0.9) ; /* Fondo translúcido */
+  border: 1px solid #ddd ;
+  border-radius: var(--border-radius) ;
+  padding: 20px ;
+  width: 320px ;
+  box-shadow: 0 4px 8px var(--shadow-color) ;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease ;
+  text-align: center ;
+}
+
+.card-pokemon:hover {
+  transform: translateY(-10px) ;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) ;
+}
+
+/* Texto dentro de la tarjeta */
+.card-pokemon h2 {
+  font-family: var(--primary-font) ;
+  color: var(--primary-color) ;
+  margin-bottom: 16px ;
+}
+
+.card-pokemon p {
+  font-size: 1rem ;
+  line-height: 1.5 ;
+  color: var(--text-color) ;
+}
+
+/* === Botones Interactivos === */
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05); /* Pequeño zoom */
+  color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* === Sección de búsqueda === */
+.search-section {
+  text-align: center;
+  margin: 20px 0;
+  color: var(--primary-color); /* Amarillo inspirado en Pikachu */
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* === Input de búsqueda === */
+.search-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input-label {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: #fefefe;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow var(--transition-speed) ease;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón Buscar */
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--highlight-color); /* Naranja fuerte */
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.search-button:hover {
+  background-color: #e63900; /* Naranja más oscuro */
+  transform: scale(1.05);
+}
+
+.search-button:active {
+  transform: scale(0.95);
+}
+
+/* === Mensaje de error === */
+.error-message {
+  margin-top: 10px;
+  color: var(--error-color); /* Rojo para resaltar errores */
+  font-size: 14px;
+}
+
+/* === Estilo del título principal === */
+h1 {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.welcome-text {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.welcome-text span {
+  color: var(--accent-color);
+}

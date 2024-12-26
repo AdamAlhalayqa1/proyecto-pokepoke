@@ -1,0 +1,118 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ff9901, #e9413f);
+  color: #fff;
+  padding: 5px 10px; /* Reducido de 10px 20px a 5px 10px */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  border-top: 5px solid #ffd700;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2px; /* Reducido de 5px a 2px */
+}
+
+.footer-section {
+  flex: 1;
+  padding: 5px; /* Reducido de 10px a 5px */
+  text-align: center;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 5px; /* Mantenido en 5px */
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-section:hover {
+  transform: scale(1.05);
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #ffd700;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.footer-section h3 {
+  font-size: 14px; /* Reducido de 16px a 14px */
+  text-transform: uppercase;
+  margin-bottom: 8px; /* Reducido de 10px a 8px */
+  color: #ffd700;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resources-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section ul li {
+  margin: 5px 0; /* Mantenido en 5px 0 */
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #ffd700;
+  text-shadow: 1px 1px 2px #000;
+  transform: translateY(-2px);
+}
+
+.footer-section ul li a svg {
+  margin-right: 5px; /* Reducido de 8px a 5px */
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+}
+
+.social-links a svg {
+  margin-right: 5px;
+}
+
+.contact p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0; /* Mantenido en 5px */
+}
+
+.contact p svg {
+  margin-right: 5px; /* Reducido de 8px a 5px */
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5px; /* Reducido de 10px a 5px */
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 5px; /* Mantenido en 5px */
+}
