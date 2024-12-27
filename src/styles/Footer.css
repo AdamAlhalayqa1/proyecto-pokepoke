@@ -5,7 +5,7 @@
   width: 100%;
   background: linear-gradient(90deg, #ff9901, #e9413f);
   color: #fff;
-  padding: 5px 10px; /* Reducido de 10px 20px a 5px 10px */
+  padding: 10px 20px; /* Restablecido el padding */
   font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
@@ -23,16 +23,16 @@
   flex-wrap: wrap;
   width: 100%;
   max-width: 1200px;
-  margin-bottom: 2px; /* Reducido de 5px a 2px */
+  margin-bottom: 5px; /* Restablecido el margin-bottom */
 }
 
 .footer-section {
   flex: 1;
-  padding: 5px; /* Reducido de 10px a 5px */
+  padding: 10px; /* Restablecido el padding */
   text-align: center;
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.1);
-  margin: 5px; /* Mantenido en 5px */
+  margin: 5px;
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -44,9 +44,9 @@
 }
 
 .footer-section h3 {
-  font-size: 14px; /* Reducido de 16px a 14px */
+  font-size: 16px; /* Restablecido el font-size */
   text-transform: uppercase;
-  margin-bottom: 8px; /* Reducido de 10px a 8px */
+  margin-bottom: 10px; /* Restablecido el margin-bottom */
   color: #ffd700;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .footer-section ul li {
-  margin: 5px 0; /* Mantenido en 5px 0 */
+  margin: 5px 0;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -83,16 +83,23 @@
 }
 
 .footer-section ul li a svg {
-  margin-right: 5px; /* Reducido de 8px a 5px */
+  margin-right: 8px; /* Restablecido el margin-right */
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column; /* Alinear los enlaces verticalmente */
+  align-items: center; /* Centrar los enlaces */
 }
 
 .social-links a {
   display: flex;
   align-items: center;
+  margin: 5px 0; /* Espacio entre enlaces */
 }
 
 .social-links a svg {
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 .contact p {
@@ -101,18 +108,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5px 0; /* Mantenido en 5px */
+  margin: 5px 0;
 }
 
 .contact p svg {
-  margin-right: 5px; /* Reducido de 8px a 5px */
+  margin-right: 5px;
 }
 
 .copyright {
   text-align: center;
   font-size: 12px;
-  margin-top: 5px; /* Reducido de 10px a 5px */
+  margin-top: 10px; /* Restablecido el margin-top */
   color: rgba(255, 255, 255, 0.7);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding-top: 5px; /* Mantenido en 5px */
+  padding-top: 5px;
 }

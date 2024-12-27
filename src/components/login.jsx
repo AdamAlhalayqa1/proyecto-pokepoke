@@ -9,8 +9,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const [loading, setLoading] = useState(false); // Manejo de estado de carga
-  const navigate = useNavigate(); // Para redirigir al usuario después del login
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -18,7 +18,6 @@ const Login = () => {
     setSuccess("");
     setLoading(true);
 
-    // Validación de formato de correo
     if (!/\S+@\S+\.\S+/.test(email)) {
       setError("Por favor, ingresa un correo válido.");
       setLoading(false);
@@ -30,7 +29,7 @@ const Login = () => {
       setSuccess("Inicio de sesión exitoso. Redirigiendo...");
       setEmail("");
       setPassword("");
-      setTimeout(() => navigate("/"), 2000); // Redirige después de 2 segundos
+      setTimeout(() => navigate("/"), 2000);
     } catch (error) {
       if (error.code === "auth/user-not-found") {
         setError("Usuario no encontrado. Verifica tu correo.");
@@ -66,7 +65,6 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        {/* Mensajes de error y éxito */}
         {error && (
           <p className="error-message" aria-live="polite">
             {error}

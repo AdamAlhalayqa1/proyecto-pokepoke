@@ -34,6 +34,11 @@ const CartaPokemon = () => {
         height: (data.height / 10).toFixed(2), // Conversión a metros
         weight: (data.weight / 10).toFixed(2), // Conversión a kilogramos
         types: data.types.map((type) => type.type.name),
+        abilities: data.abilities.map((ability) => ability.ability.name),
+        stats: data.stats.map((stat) => ({
+          name: stat.stat.name,
+          base: stat.base_stat,
+        })),
       });
     } catch (err) {
       setError(err.message || "Error al buscar el Pokémon.");
@@ -81,6 +86,17 @@ const CartaPokemon = () => {
           <p className="text-gray-700">
             <strong>Tipos:</strong> {pokemon.types.join(", ")}
           </p>
+          <p className="text-gray-700">
+            <strong>Habilidades:</strong> {pokemon.abilities.join(", ")}
+          </p>
+          <h3 className="text-xl font-bold text-gray-800 mt-4">Estadísticas</h3>
+          <ul className="pokemon-stats">
+            {pokemon.stats.map((stat) => (
+              <li key={stat.name} className="text-gray-700">
+                <strong>{stat.name}:</strong> {stat.base}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BuscaPokemon from "./components/BuscaPokemon";
-import Login from "./components/login";
+import Login from "src/components/login.jsx";
 import Register from "./components/Register";
 import NotFound from "./pages/NotFound";
 
