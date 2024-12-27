@@ -1,6 +1,6 @@
 /* === Variables === */
 :root {
-  --background-url: url('./src/assets/falling-pokeballs-3qsnk7e12tvlwsau.jpg');
+  --background-url: url('src/assets/falling-pokeballs-3qsnk7e12tvlwsau.jpg');
   --primary-font: 'Press Start 2P', cursive; /* Fuente personalizada para títulos */
   --body-font: 'Arial', sans-serif; /* Fuente secundaria */
   --primary-color: #ffcc00; /* Amarillo Pikachu */
