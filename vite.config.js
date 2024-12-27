@@ -3,10 +3,12 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: 'https://AdamAlhalayqa1.github.io/proyecto-pokepoke/', 
   resolve: {
     alias: {
-      '@': '/src', // Acceso directo al directorio de "src"
+      '@': '/src', 
     },
+    
   },
   server: {
     port: 3000, // Define un puerto estándar para el servidor
