@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 const BuscaPokemon = ({ onSearch }) => {
   const [name, setName] = useState(""); // Estado para el nombre ingresado
 

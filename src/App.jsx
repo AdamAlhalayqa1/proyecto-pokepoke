@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
 import { auth } from "./firebaseConfig";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import Header from "./components/Header"; // Importación del Header
+import Header from "./components/Header";
 
 const App = () => {
   const [pokemon, setPokemon] = useState(null);
@@ -48,8 +48,8 @@ const App = () => {
         abilities: data.abilities.map((ability) => ability.ability.name),
         stats: data.stats.map((stat) => ({
           name: stat.stat.name,
-          base: stat.base_stat
-        }))
+          base: stat.base_stat,
+        })),
       });
     } catch (error) {
       setError("Pokémon no encontrado. Inténtalo de nuevo.");
@@ -65,8 +65,8 @@ const App = () => {
     }
   };
 
-  const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
       handleSearch();
     }
   };
@@ -89,7 +89,7 @@ const App = () => {
                     className="search-input"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    onKeyPress={handleKeyPress} /* Aquí añadimos el evento */
+                    onKeyDown={handleKeyDown} /* Actualización: usamos onKeyDown */
                   />
                   <button onClick={handleSearch} className="search-button">
                     Buscar
@@ -134,7 +134,7 @@ const App = () => {
             </div>
           }
         />
-        
+
         <Route path="/buscar" element={<BuscaPokemon />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />

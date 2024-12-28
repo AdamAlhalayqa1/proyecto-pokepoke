@@ -1,20 +1,20 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: 'https://AdamAlhalayqa1.github.io/proyecto-pokepoke/', 
+  base: "https://AdamAlhalayqa1.github.io/proyecto-pokepoke/",
   resolve: {
     alias: {
-      '@': '/src', 
+      "@": "/src",
     },
-    
   },
   server: {
-    port: 3000, // Define un puerto estándar para el servidor
+    port: 3000,
+    historyApiFallback: true, // Reenvía todas las rutas al index.html
   },
   build: {
-    outDir: 'dist', // Define la salida de compilación
-    sourcemap: true, // Facilita la depuración
+    outDir: "dist",
+    sourcemap: true,
   },
 });
