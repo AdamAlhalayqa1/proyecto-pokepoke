@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./styles/App.css";
-import Login from "./components/Login.jsx";
+import Login from "./components/Login";
 import BuscaPokemon from "./components/BuscaPokemon";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
